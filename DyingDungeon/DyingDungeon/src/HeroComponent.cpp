@@ -878,7 +878,8 @@ bool HeroComponent::TakeTurn(EntityList heros, EntityList enemies)
 			DirectX::XMFLOAT3 tempPos1;
 			DirectX::XMFLOAT3 tempPos2;
 			DirectX::XMVECTOR position = { 0.0f,0.0f,0.0f,0.0f };
-			DirectX::XMVECTOR rotation = DirectX::XMLoadFloat3(&mCurrentSkill->GetParticleSystem()->getComponent<Odyssey::Transform>()->getEulerRotation());
+			auto psRot = mCurrentSkill->GetParticleSystem()->getComponent<Odyssey::Transform>()->getEulerRotation();
+			DirectX::XMVECTOR rotation = DirectX::XMLoadFloat3(&psRot);
 			Odyssey::Entity* temp = nullptr;
 			if (mCurrentSkill->IsAOE())
 			{
@@ -901,13 +902,14 @@ bool HeroComponent::TakeTurn(EntityList heros, EntityList enemies)
 				{
 					for (Odyssey::Entity* c : heros)
 					{
+						auto originalPos = c->getComponent<Odyssey::Transform>()->getPosition();
 						tempPos1 = c->getComponent<Odyssey::Transform>()->getPosition();
 						tempPos2 = mCurrentSkill->GetParticleOffset();
 						tempPos1.x += tempPos2.x + 0.5f;
 						tempPos1.y += tempPos2.y + 0.5f;
 						tempPos1.z += tempPos2.z + 0.5f;
 						position = DirectX::XMLoadFloat3(&(tempPos1));
-						position = DirectX::XMLoadFloat3(&(c->getComponent<Odyssey::Transform>()->getPosition()));
+						position = DirectX::XMLoadFloat3(&(originalPos));
 						Odyssey::EventManager::getInstance().publish(new Odyssey::SpawnEntityEvent(mCurrentSkill->GetParticleSystem(), &temp, position, rotation));
 					}
 				}

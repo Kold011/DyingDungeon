@@ -78,7 +78,8 @@ namespace Odyssey
 			args.perFrame.view = camera->getInverseViewMatrix();
 
 			// Calculate and set view proj
-			DirectX::XMMATRIX viewProj = DirectX::XMMatrixMultiply(DirectX::XMLoadFloat4x4(&args.perFrame.view), DirectX::XMLoadFloat4x4(&camera->getProjectionMatrix()));
+			auto tform = camera->getProjectionMatrix();
+			DirectX::XMMATRIX viewProj = DirectX::XMMatrixMultiply(DirectX::XMLoadFloat4x4(&args.perFrame.view), DirectX::XMLoadFloat4x4(&tform));
 			DirectX::XMStoreFloat4x4(&args.perFrame.viewProj, viewProj);
 		}
 

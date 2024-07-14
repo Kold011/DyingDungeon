@@ -47,7 +47,8 @@ void TowerManager::initialize()
 
 	for (int i = 0; i < TeamManager::getInstance().GetUpdatedPlayerTeam().size(); i++)
 	{
-		HeroComponent* savedHeroComp = &TeamManager::getInstance().GetUpdatedPlayerTeamHeroComp(i);
+		auto comp = TeamManager::getInstance().GetUpdatedPlayerTeamHeroComp(i);
+		HeroComponent* savedHeroComp = &comp;
 		// Reassign all of the properties
 		mPlayerTeam[i]->getComponent<HeroComponent>()->SetBloodPrefab(savedHeroComp->GetBloodPrefab());
 		mPlayerTeam[i]->getComponent<HeroComponent>()->SetHP(savedHeroComp->GetHP());

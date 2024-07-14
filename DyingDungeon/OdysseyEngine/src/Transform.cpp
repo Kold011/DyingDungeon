@@ -170,7 +170,8 @@ namespace Odyssey
 	{
 		// Store the world matrix in an XMMatrix
 		mLock.lock(LockState::Read);
-		DirectX::XMMATRIX transform = DirectX::XMLoadFloat4x4(&getLocalTransform(ignoreScale));
+		auto tform = getLocalTransform(ignoreScale);
+		DirectX::XMMATRIX transform = DirectX::XMLoadFloat4x4(&tform);
 
 		// Get the entity we are attached to's parent
 		Entity* parent = mEntity->getParent();
