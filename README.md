@@ -1,5 +1,5 @@
 # Dying Dungeon
-Dying Dungeon is a 3D dungeon crawler turn based RPG where the player uses strategy and tactics to battle their way through a massive medieval-style dungeon. Players use team-building and skill to navigate the dungeon while defeating various enemies to earn experience and gear, allowing players to upgrade and customize their characters.
+Dying Dungeon is a 3D dungeon crawler turn based RPG where the player uses strategy and tactics to battle their way through a massive medieval-style dungeon. Players use team-building and skill to navigate the dungeon while defeating various enemies.
 
 ![image](https://github.com/user-attachments/assets/3d60a0e6-da0b-4fe8-991a-f46d57006557)
 
