@@ -1418,7 +1418,7 @@ void setupBardVFX(Odyssey::Application* application, Odyssey::Entity* showcase)
 	showcase->getComponent<SkillShowcase>()->bard4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setAlphaBlend(true);
 	showcase->getComponent<SkillShowcase>()->bard4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setReceiveShadow(false);
 	showcase->getComponent<SkillShowcase>()->bard4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setDiffuseColor({ 0.12f, 1.0f, 0.29f, 1.0f });
-	showcase->getComponent<SkillShowcase>()->bard4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("../Odyssey/shaders/UnlitPixelShader.cso");
+	showcase->getComponent<SkillShowcase>()->bard4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("UnlitShader.frag.cso");
 	skillVFX = showcase->getComponent<SkillShowcase>()->bard4->addComponent<Odyssey::ParticleSystem>();
 	skillVFX->setTexture(Odyssey::TextureType::Diffuse, "Star1.png");
 	skillVFX->setColor(DirectX::XMFLOAT3(0.12f, 1.0f, 0.29f), DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f));
@@ -1530,7 +1530,7 @@ void setupPaladinVFX(Odyssey::Application* application, Odyssey::Entity* showcas
 	showcase->getComponent<SkillShowcase>()->paladin3->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setAlphaBlend(true);
 	showcase->getComponent<SkillShowcase>()->paladin3->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setReceiveShadow(false);
 	showcase->getComponent<SkillShowcase>()->paladin3->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setDiffuseColor({ 0.75f, 0.65f, 0.1f, 1.0f });
-	showcase->getComponent<SkillShowcase>()->paladin3->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("../Odyssey/shaders/UnlitPixelShader.cso");
+	showcase->getComponent<SkillShowcase>()->paladin3->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("UnlitShader.frag.cso");
 	skillVFX = showcase->getComponent<SkillShowcase>()->paladin3->addComponent<Odyssey::ParticleSystem>();
 	skillVFX->setTexture(Odyssey::TextureType::Diffuse, "Star2.png");
 	skillVFX->setColor(DirectX::XMFLOAT3(0.75f, 0.65f, 0.1f), DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f));
@@ -1565,7 +1565,7 @@ void setupPaladinVFX(Odyssey::Application* application, Odyssey::Entity* showcas
 	showcase->getComponent<SkillShowcase>()->paladin4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setAlphaBlend(true);
 	showcase->getComponent<SkillShowcase>()->paladin4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setReceiveShadow(false);
 	showcase->getComponent<SkillShowcase>()->paladin4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setDiffuseColor({ 0.75f, 0.65f, 0.1f, 1.0f });
-	showcase->getComponent<SkillShowcase>()->paladin4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("../Odyssey/shaders/UnlitPixelShader.cso");
+	showcase->getComponent<SkillShowcase>()->paladin4->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("UnlitShader.frag.cso");
 	skillVFX = showcase->getComponent<SkillShowcase>()->paladin4->addComponent<Odyssey::ParticleSystem>();
 	skillVFX->setTexture(Odyssey::TextureType::Diffuse, "Star2.png");
 	skillVFX->setColor(DirectX::XMFLOAT3(0.75f, 0.65f, 0.1f), DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f));

@@ -2,15 +2,23 @@
 #include "Shader.h"
 #include "SamplerState.h"
 #include "RenderManager.h"
+#include <filesystem>
 
 namespace Odyssey
 {
 	Shader::Shader(ShaderType shaderType, const char* filename, D3D11_INPUT_ELEMENT_DESC* layout, int numberOfElements)
 	{
 		mShaderType = shaderType;
+
+		// Note: This is an updated "hack" to set the shaders to load next to the EXE instead of a specific resources folder
+		using Path = std::filesystem::path;
+		wchar_t buffer[MAX_PATH];
+		GetModuleFileName(NULL, buffer, sizeof(buffer));
+		Path outPath = Path(buffer).parent_path() / Path(filename);
+
 		// Read the shader from the cso file
 		char* byteCode = { 0 };
-		size_t shaderSize = readShaderFile(filename, byteCode);
+		size_t shaderSize = readShaderFile(outPath.string().c_str(), byteCode);
 
 		switch (mShaderType)
 		{

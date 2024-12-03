@@ -831,7 +831,7 @@ void CharacterFactory::BardSkill4Prefab()
 	mBardSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setAlphaBlend(true);
 	mBardSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setReceiveShadow(false);
 	mBardSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setDiffuseColor({ 0.12f, 1.0f, 0.29f, 1.0f });
-	mBardSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("../Odyssey/shaders/UnlitPixelShader.cso");
+	mBardSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("UnlitShader.frag.cso");
 	Odyssey::ParticleSystem* skillVFX = mBardSkill->addComponent<Odyssey::ParticleSystem>();
 	skillVFX->setTexture(Odyssey::TextureType::Diffuse, "Star1.png");
 	skillVFX->setColor(DirectX::XMFLOAT3(0.12f, 1.0f, 0.29f), DirectX::XMFLOAT3(0.0f, 0.0f, 0.0f));
@@ -1008,7 +1008,7 @@ void CharacterFactory::PallySkill3Prefab()
 	mSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setAlphaBlend(true);
 	mSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setReceiveShadow(false);
 	mSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setDiffuseColor({ 0.75f, 0.65f, 0.1f, 1.0f });
-	mSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("../Odyssey/shaders/UnlitPixelShader.cso");
+	mSkill->getComponent<Odyssey::MeshRenderer>()->getMaterial()->setShader("UnlitShader.frag.cso");
 
 	Odyssey::ParticleSystem* skillVFX = mSkill->addComponent<Odyssey::ParticleSystem>();
 	skillVFX->setTexture(Odyssey::TextureType::Diffuse, "Star1.png");

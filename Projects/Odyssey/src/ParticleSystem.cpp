@@ -65,9 +65,9 @@ namespace Odyssey
 	ParticleSystem::ParticleSystem()
 	{
 		// Create the shaders
-		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "../Odyssey/shaders/ParticleVertexShader.cso", nullptr, 0);
-		mGeometryShader = RenderManager::getInstance().createShader(ShaderType::GeometryShader, "../Odyssey/shaders/ParticleGeometryShader.cso", nullptr);
-		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "../Odyssey/shaders/ParticlePixelShader.cso", nullptr);
+		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "ParticleShader.vert.cso", nullptr, 0);
+		mGeometryShader = RenderManager::getInstance().createShader(ShaderType::GeometryShader, "ParticleShader.geo.cso", nullptr);
+		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "ParticleShader.frag.cso", nullptr);
 
 		// Create the render state
 		mRenderState = RenderManager::getInstance().createRenderState(Topology::PointList, CullMode::CULL_NONE, FillMode::FILL_SOLID, false, false, false);

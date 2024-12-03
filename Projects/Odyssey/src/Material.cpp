@@ -44,7 +44,7 @@ namespace Odyssey
 
 		// Bind the material properties constant buffer to the pixel shader slot 0
 		Buffer* materialBuffer = RenderManager::getInstance().getBuffer(mMaterialBuffer);
-		materialBuffer->updateData(context , &mProperties);
+		materialBuffer->updateData(context, &mProperties);
 		materialBuffer->bind(context, 0, ShaderType::PixelShader);
 
 		// Bind the diffuse texture
@@ -111,26 +111,26 @@ namespace Odyssey
 		mLock.lock(LockState::Write);
 		switch (textureType)
 		{
-		case TextureType::Diffuse:
-		{
-			mProperties.mHasDiffuseTexture = 1;
-			break;
-		}
-		case TextureType::Emissive:
-		{
-			mProperties.mHasEmissiveTexture = 1;
-			break;
-		}
-		case TextureType::Specular:
-		{
-			mProperties.mHasSpecularTexture = 1;
-			break;
-		}
-		case TextureType::NormalMap:
-		{
-			mProperties.mHasNormalTexture = 1;
-			break;
-		}
+			case TextureType::Diffuse:
+			{
+				mProperties.mHasDiffuseTexture = 1;
+				break;
+			}
+			case TextureType::Emissive:
+			{
+				mProperties.mHasEmissiveTexture = 1;
+				break;
+			}
+			case TextureType::Specular:
+			{
+				mProperties.mHasSpecularTexture = 1;
+				break;
+			}
+			case TextureType::NormalMap:
+			{
+				mProperties.mHasNormalTexture = 1;
+				break;
+			}
 		}
 		mTextureMap[textureType] = textureID;
 		mLock.unlock(LockState::Write);

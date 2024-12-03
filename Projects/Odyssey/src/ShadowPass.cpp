@@ -51,8 +51,8 @@ namespace Odyssey
 		};
 
 		// Create the depth vertex and pixel shaders
-		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "../Odyssey/shaders/DepthVertexShader.cso", vShaderLayout, 7);
-		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "../Odyssey/shaders/DepthPixelShader.cso", nullptr, 0);
+		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "DepthShader.vert.cso", vShaderLayout, 7);
+		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "DepthShader.frag.cso", nullptr, 0);
 
 		// Create the shadow map for dynamic objects
 		mDynamicTarget = RenderManager::getInstance().createRenderTarget(texWidth, texHeight, false);

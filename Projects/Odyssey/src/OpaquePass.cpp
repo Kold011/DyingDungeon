@@ -44,10 +44,10 @@ namespace Odyssey
 		};
 
 		// Create the default pixel shader
-		mPixelShader = renderManager.createShader(ShaderType::PixelShader, "../Odyssey/shaders/LitPixelShader.cso", nullptr);
+		mPixelShader = renderManager.createShader(ShaderType::PixelShader, "LitShader.frag.cso", nullptr);
 
 		// Create the default vertex shader
-		mVertexShader = renderManager.createShader(ShaderType::VertexShader, "../Odyssey/shaders/VertexShader.cso", vShaderLayout, 7);
+		mVertexShader = renderManager.createShader(ShaderType::VertexShader, "LitShader.vert.cso", vShaderLayout, 7);
 		mFrustumCull = true;
 
 		// Create the per object lighting buffer

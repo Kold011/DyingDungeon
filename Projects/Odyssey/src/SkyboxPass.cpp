@@ -31,8 +31,8 @@ namespace Odyssey
 			{ "BLENDINDICES", 0, DXGI_FORMAT_R32G32B32A32_SINT, 0, 64, D3D11_INPUT_PER_VERTEX_DATA, 0 },
 			{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 80, D3D11_INPUT_PER_VERTEX_DATA, 0 }
 		};
-		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "../Odyssey/shaders/SkyboxVertexShader.cso", vShaderLayout, 7);
-		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "../Odyssey/shaders/SkyboxPixelShader.cso", nullptr);
+		mVertexShader = RenderManager::getInstance().createShader(ShaderType::VertexShader, "SkyboxShader.vert.cso", vShaderLayout, 7);
+		mPixelShader = RenderManager::getInstance().createShader(ShaderType::PixelShader, "SkyboxShader.frag.cso", nullptr);
 	}
 
 	void SkyboxPass::preRender(RenderArgs& args, RenderPackage& renderPackage)
