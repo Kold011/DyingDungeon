@@ -41,5 +41,5 @@ project "Dying Dungeon"
         
     filter { "configurations:Release" }
         runtime "Release"
-        symbols "Off"
+        symbols "On"
         ProcessDependencies("Release")

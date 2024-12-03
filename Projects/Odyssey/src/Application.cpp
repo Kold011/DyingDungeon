@@ -55,7 +55,7 @@ namespace Odyssey
 		mRenderPipeline = std::make_shared<RenderPipeline>();
 
 		// Enable muli-threading by default
-		mIsMultithreading = true;
+		mIsMultithreading = false;
 		mIsShutdown = false;
 		mIsRendering = true;
 		mTimer.Restart();
