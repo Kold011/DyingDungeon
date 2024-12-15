@@ -11,11 +11,11 @@ Currently Dying Dungeon is only supported on Windows and uses a visual studio 20
 
 # Build Instructions
 1. Run the Win-GenProjects.bat file located in the Scripts folder to generate the Visual Studio 2022 project and solution files.
-2. Open the Dying Dungeon solution located at in repository root folder.
+2. Open the Dying Dungeon solution located in the repository root folder.
 3. Build the solution in Debug or Relase.
 
 # Controls
-Dying Dungeon supports both keyboard controls and mouse input to interact with the game/
+Dying Dungeon supports both keyboard and mouse controls to interact with the game
 
 ## Keyboard
 * Use the arrow keys to cycle through which enemy to target
@@ -24,6 +24,6 @@ Dying Dungeon supports both keyboard controls and mouse input to interact with t
 * The escape key will de-select the current skill
 
 ## Mouse
-* Hovering over a skill will show the tooltip
-* Clicking a skill will select the skill
+* Hovering over a skill icon will show the tooltip
+* Clicking a skill icon will select the skill
 * Clicking an enemy will use the skill on the selected enemy.
